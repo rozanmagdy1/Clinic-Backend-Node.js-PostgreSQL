@@ -1,0 +1,18 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "server.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/server.js"
+        }
+    ],
+    "env": {
+        "DB_URI": "postgres://default:K3buSnwPVH6C@ep-old-union-504825-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb"
+    }
+}

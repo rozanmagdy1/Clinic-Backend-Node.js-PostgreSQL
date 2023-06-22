@@ -1,0 +1,1553 @@
+{
+	"info": {
+		"_postman_id": "5ac47928-5e19-4bd3-b340-f5c979dd5947",
+		"name": "clinic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23282249"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Doctors",
+					"item": [
+						{
+							"name": "add-doctor",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg0MzY2NzE0fQ.rovqAo8QqiZCpgS7QbW6keWjH8ZdwNntqNewSGRTkmg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"rozanmagdy1@gmail.com\",\r\n    \"password\":\"12345\",\r\n    \"firstName\": \"Rozan\",\r\n    \"lastName\": \"Magdy\",\r\n    \"age\": 23,\r\n    \"phone\": \"01030166199\",\r\n    \"specialist\": \"eyes\",\r\n    \"price\":200,\r\n    \"experience\":\"5 years experience\",\r\n    \"verified\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/admin/addDoctor",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"addDoctor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-all-doctors",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg3MzUxNjYwfQ.7aOBw5UHiiQ1GOT1DHneVbefsiFuVdaOcuPgKx-xQ4s",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/admin/Doctors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"Doctors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-profile",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg3MzUxNjYwfQ.7aOBw5UHiiQ1GOT1DHneVbefsiFuVdaOcuPgKx-xQ4s",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/admin/DoctorProfile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"DoctorProfile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-doctor-by-id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzbWFhcmFteUBnbWFpbC5jb20iLCJpZCI6MSwidXNlclR5cGUiOjEsImlhdCI6MTY4NzM0ODQyMX0.q8wQpRNVehY5v7KLpGr9xv1B6X-sAKN4IH3wW3GLdH0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/admin/Doctor/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"Doctor",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-doctor-info-by-id",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzbWFhcmFteUBnbWFpbC5jb20iLCJpZCI6MSwidXNlclR5cGUiOjEsImlhdCI6MTY4NzM0ODQyMX0.q8wQpRNVehY5v7KLpGr9xv1B6X-sAKN4IH3wW3GLdH0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\": \"12345\",\r\n    \"firstName\": \"Rozan\",\r\n    \"lastName\": \"Magdy\",\r\n    \"age\": 50,\r\n    \"phone\": \"01030166199\",\r\n    \"specialist\": \"skin\",\r\n    \"price\": 200,\r\n    \"experience\": \"5 years experience\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/admin/Doctor/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"Doctor",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-doctor-by-id",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzbWFhcmFteUBnbWFpbC5jb20iLCJpZCI6MSwidXNlclR5cGUiOjEsImlhdCI6MTY4NzM0ODQyMX0.q8wQpRNVehY5v7KLpGr9xv1B6X-sAKN4IH3wW3GLdH0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\" : \"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/admin/Doctor/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"Doctor",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "upload-image",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg0MzY2NzE0fQ.rovqAo8QqiZCpgS7QbW6keWjH8ZdwNntqNewSGRTkmg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "doctorImage",
+											"type": "file",
+											"src": "/C:/Users/Rozan Magdy/Pictures/bottom2.1.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/admin/Doctor/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"Doctor",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Authentication",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"rozanmagdy1@gmail.com\",\r\n    \"password\":\"12345\",\r\n    \"userType\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/admin/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "forgot-password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"rozanmagdy1@gmail.com\",\r\n    \"userType\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/admin/forgotPassword",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"forgotPassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reset-password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2RlIjoiNmQiLCJpYXQiOjE2ODczNTIxNDIsImV4cCI6MTY4NzM1NTc0Mn0.eAwhKSTBuMPQjiCb15MCvQ3_cYeBkgXmD6aJRjOubhI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"rozanmagdy1@gmail.com\",\r\n    \"newPassword\": \"123456\",\r\n    \"userType\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/admin/resetPassword",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"resetPassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change-password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjo0LCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg3MzUyMjQ1fQ.E2xjPIhr7GAD6m_UZR136wK1XeT-F2LjzCob30b8nXs",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"rozanmagdy1@gmail.com\",\r\n    \"oldPassword\" : \"123456\",\r\n    \"newPassword\": \"12345\",\r\n    \"userType\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/admin/changePassword",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"changePassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "account-verfication-step-one",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjo0LCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg3MzUyMjQ1fQ.E2xjPIhr7GAD6m_UZR136wK1XeT-F2LjzCob30b8nXs",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"rozanmagdy1@gmail.com\",\r\n    \"userType\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/admin/verifyAccountStep1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"verifyAccountStep1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "account-verfication-step-two",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjo0LCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg3MzUyMjQ1fQ.E2xjPIhr7GAD6m_UZR136wK1XeT-F2LjzCob30b8nXs",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\": \"486DEC\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/admin/verifyAccountStep2/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsInVzZXJUeXBlIjoxLCJjb2RlIjoiNDg2REVDIiwiaWF0IjoxNjg3MzUyNzEyLCJleHAiOjE2ODczNTI4MzJ9.RCvArLFC5GrPQvJtSlXMA4mgsmmcUIa-RlSZERhuibQ",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"verifyAccountStep2",
+										"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsInVzZXJUeXBlIjoxLCJjb2RlIjoiNDg2REVDIiwiaWF0IjoxNjg3MzUyNzEyLCJleHAiOjE2ODczNTI4MzJ9.RCvArLFC5GrPQvJtSlXMA4mgsmmcUIa-RlSZERhuibQ"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Patients",
+					"item": [
+						{
+							"name": "get-all-patients",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg0MzY2NzE0fQ.rovqAo8QqiZCpgS7QbW6keWjH8ZdwNntqNewSGRTkmg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/admin/Patients",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"Patients"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-patient-by-id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg0MzY2NzE0fQ.rovqAo8QqiZCpgS7QbW6keWjH8ZdwNntqNewSGRTkmg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/admin/Patients/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"Patients",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Schedules",
+					"item": [
+						{
+							"name": "add-schedule",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg0MzY2NzE0fQ.rovqAo8QqiZCpgS7QbW6keWjH8ZdwNntqNewSGRTkmg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"appointment\": \"2023-06-05 17:00:00\",\r\n    \"doctorId\": 1,\r\n    \"available\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/admin/addSchedule",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"addSchedule"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-all-schedules",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg0MzY2NzE0fQ.rovqAo8QqiZCpgS7QbW6keWjH8ZdwNntqNewSGRTkmg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/admin/Schedules",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"Schedules"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-schedule-by-id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg0MzY2NzE0fQ.rovqAo8QqiZCpgS7QbW6keWjH8ZdwNntqNewSGRTkmg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/admin/Schedule/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"Schedule",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-schedules-by-doctor-id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg0MzY2NzE0fQ.rovqAo8QqiZCpgS7QbW6keWjH8ZdwNntqNewSGRTkmg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/admin/Schedules/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"Schedules",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-schedule",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg0MzY2NzE0fQ.rovqAo8QqiZCpgS7QbW6keWjH8ZdwNntqNewSGRTkmg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\": \"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/admin/Schedule/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"Schedule",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Booking",
+					"item": [
+						{
+							"name": "get-all-bookings",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoyLCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg1NjI2NDI5fQ.GpCQb5FXcPVicBGUyj_RWLP6-FiOeHPFPXH5I8pfdU0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/admin/bookings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"bookings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-booking-by-id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoyLCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg1NjI2NDI5fQ.GpCQb5FXcPVicBGUyj_RWLP6-FiOeHPFPXH5I8pfdU0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/admin/booking/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"booking",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-bookings-of-doctor-by-doctor-id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoyLCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg1NjI2NDI5fQ.GpCQb5FXcPVicBGUyj_RWLP6-FiOeHPFPXH5I8pfdU0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/admin/bookings/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"bookings",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-booking",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHkxQGdtYWlsLmNvbSIsImlkIjoyLCJ1c2VyVHlwZSI6MSwiaWF0IjoxNjg1NjI2NDI5fQ.GpCQb5FXcPVicBGUyj_RWLP6-FiOeHPFPXH5I8pfdU0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userType\": 1,\r\n    \"password\": \"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/admin/deleteBooking/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"admin",
+										"deleteBooking",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Website&Mobile",
+			"item": [
+				{
+					"name": "Doctors",
+					"item": [
+						{
+							"name": "get-all-doctors",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/website/Doctors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"Doctors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-doctor-by-id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsYWFrYXJlbUBnbWFpbC5jb20iLCJpZCI6MSwidXNlclR5cGUiOjIsImlhdCI6MTY4NzM1MTA5Mn0.DSBAvUbT1nMzql-PBTEaFd1n8L9hcpU3LEXCZekZbw0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/website/Doctor/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"Doctor",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Authentication",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"rozanmagdy5@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"userType\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/website/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "forgot-password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg0NDUzMDYzfQ.7lhtwlKe_4vptTurT8tK3Um0BiDduKXBlOETOvG30F4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"rozanmagdy5@gmail.com\",\r\n    \"userType\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/website/forgotPassword",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"forgotPassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reset-password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2RlIjoiNTgiLCJpYXQiOjE2ODczNTM0MzAsImV4cCI6MTY4NzM1NzAzMH0.4tS2AmZTjPDQ351JLenLogIWikjRuwDKY89ME7mL2gM",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"rozanmagdy5@gmail.com\",\r\n    \"newPassword\": \"123456\",\r\n    \"userType\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/website/resetPassword",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"resetPassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change-password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg0NDUzMDYzfQ.7lhtwlKe_4vptTurT8tK3Um0BiDduKXBlOETOvG30F4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"rozanmagdy5@gmail.com\",\r\n    \"oldPassword\" : \"123456\",\r\n    \"newPassword\": \"12345\",\r\n    \"userType\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/website/changePassword",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"changePassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "account-verfication-step-one",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg0NDUzMDYzfQ.7lhtwlKe_4vptTurT8tK3Um0BiDduKXBlOETOvG30F4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"rozanmagdy5@gmail.com\",\r\n    \"userType\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/website/verifyAccountStep1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"verifyAccountStep1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "account-verfication-step-two",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg0NDUzMDYzfQ.7lhtwlKe_4vptTurT8tK3Um0BiDduKXBlOETOvG30F4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\": \"780C0A\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/website/verifyAccountStep2/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsInVzZXJUeXBlIjoyLCJjb2RlIjoiNzgwQzBBIiwiaWF0IjoxNjg3MzUzNDc5LCJleHAiOjE2ODczNTM1OTl9.jQ3Gf5fyoCr44baXkvhdOUbuYDpyLtyuPFhVNQPEHy8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"verifyAccountStep2",
+										"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsInVzZXJUeXBlIjoyLCJjb2RlIjoiNzgwQzBBIiwiaWF0IjoxNjg3MzUzNDc5LCJleHAiOjE2ODczNTM1OTl9.jQ3Gf5fyoCr44baXkvhdOUbuYDpyLtyuPFhVNQPEHy8"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Patients",
+					"item": [
+						{
+							"name": "add-patient",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"rozanmagdy5@gmail.com\",\r\n    \"password\": \"123\",\r\n    \"firstName\": \"Alaa\",\r\n    \"lastName\": \"Karem\",\r\n    \"age\": 22,\r\n    \"phone\": \"01030166199\",\r\n    \"verified\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/website/addPatient",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"addPatient"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-patient-profile",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoyLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg3MzUzMTkyfQ.FNGvzS0H8jibotzSaLUWSLDTA2_bxYe8sNoRQfMPUcw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/website/PatientProfile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"PatientProfile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-patient-info",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg0NDUzMDYzfQ.7lhtwlKe_4vptTurT8tK3Um0BiDduKXBlOETOvG30F4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Rozan\",\r\n    \"lastName\": \"Magdy\",\r\n    \"age\": 30,\r\n    \"phone\": \"01030166199\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/website/Patient/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"Patient",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-patient",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg0NDUzMDYzfQ.7lhtwlKe_4vptTurT8tK3Um0BiDduKXBlOETOvG30F4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/website/Patient/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"Patient",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "upload-image",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg0NDUzMDYzfQ.7lhtwlKe_4vptTurT8tK3Um0BiDduKXBlOETOvG30F4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "patientImage",
+											"type": "file",
+											"src": "/C:/Users/Rozan Magdy/Pictures/bottom4.1.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/website/Patient/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"Patient",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Schedules",
+					"item": [
+						{
+							"name": "get-all-schedules",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg0NDUzMDYzfQ.7lhtwlKe_4vptTurT8tK3Um0BiDduKXBlOETOvG30F4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/website/Schedules",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"Schedules"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-schedule-by-id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg0NDUzMDYzfQ.7lhtwlKe_4vptTurT8tK3Um0BiDduKXBlOETOvG30F4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/website/Schedule/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"Schedule",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-schedules-by-doctor-id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg0NDUzMDYzfQ.7lhtwlKe_4vptTurT8tK3Um0BiDduKXBlOETOvG30F4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/website/Schedules/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"Schedules",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Booking",
+					"item": [
+						{
+							"name": "make-booking",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg1NjI2OTM4fQ.8troE5mw_eaA0Y8pmz7Zha5gz0I_Fu3TIQRxW_aIqyE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"doctorId\": 1,\r\n    \"appointmentId\": 1,\r\n    \"patiendId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/website/addBooking",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"addBooking"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-all-bookings",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg1NjI2OTM4fQ.8troE5mw_eaA0Y8pmz7Zha5gz0I_Fu3TIQRxW_aIqyE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/website/bookings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"bookings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-booking-by-id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg1NjI2OTM4fQ.8troE5mw_eaA0Y8pmz7Zha5gz0I_Fu3TIQRxW_aIqyE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/website/booking/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"booking",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-bookings-of-doctor-by-doctor-id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg1NjI2OTM4fQ.8troE5mw_eaA0Y8pmz7Zha5gz0I_Fu3TIQRxW_aIqyE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/website/bookings/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"bookings",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-booking",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg1NjI2OTM4fQ.8troE5mw_eaA0Y8pmz7Zha5gz0I_Fu3TIQRxW_aIqyE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userType\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/website/deleteBooking/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"deleteBooking",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "rates",
+					"item": [
+						{
+							"name": "get-all-rates",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg1NjI2OTM4fQ.8troE5mw_eaA0Y8pmz7Zha5gz0I_Fu3TIQRxW_aIqyE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/website/Rates/Doctors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"Rates",
+										"Doctors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-rates-of-doctor",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg1NjI2OTM4fQ.8troE5mw_eaA0Y8pmz7Zha5gz0I_Fu3TIQRxW_aIqyE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/website/Rates/Doctor/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"Rates",
+										"Doctor",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "make-rate",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvemFubWFnZHk1QGdtYWlsLmNvbSIsImlkIjoxLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNjg1NjI2OTM4fQ.8troE5mw_eaA0Y8pmz7Zha5gz0I_Fu3TIQRxW_aIqyE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"doctorId\": 2,\r\n    \"patientId\":3,\r\n    \"rate\":5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/website/Rate/Doctor",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"website",
+										"Rate",
+										"Doctor"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
