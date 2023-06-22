@@ -3,8 +3,8 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 require('dotenv').config();
 
-const { AdminMiddleWare } = require("./Middlewares/adminMiddleWare");
-const { WebsiteMiddleWare } = require("./Middlewares/websiteMiddleWare");
+const { AdminMiddleWare } = require("./Middlewares/adminMiddleware");
+const { WebsiteMiddleWare } = require("./Middlewares/websiteMiddleware");
 
 const { adminRoutes } = require("./Routes/adminRoutes");
 const { websiteRoutes } = require("./Routes/websiteRoutes");
