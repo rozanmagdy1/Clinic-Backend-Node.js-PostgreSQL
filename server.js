@@ -5,7 +5,6 @@ require('dotenv').config();
 
 const { AdminMiddleWare } = require("./Middlewares/adminMiddleware");
 const { WebsiteMiddleWare } = require("./Middlewares/websiteMiddleware");
-
 const { adminRoutes } = require("./Routes/adminRoutes");
 const { websiteRoutes } = require("./Routes/websiteRoutes");
 
